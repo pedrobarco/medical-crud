@@ -5,12 +5,12 @@
   "author": "Pedro Barco <pedro.barco@tecnico.ulisboa.pt>",
   "homepage": "https://github.com/pedrobarco/medical-crud#readme",
   "license": "MIT",
-  "main": "lib/app.js",
+  "main": "dist/app.js",
   "directories": {
-    "lib": "lib"
+    "lib": "dist"
   },
   "files": [
-    "lib"
+    "dist"
   ],
   "publishConfig": {
     "registry": "https://registry.yarnpkg.com"
