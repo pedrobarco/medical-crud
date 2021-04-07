@@ -7,7 +7,8 @@
   "scripts": {
     "build": "yarn lerna run build",
     "test": "yarn lerna run test",
-    "lint": "yarn lerna run lint"
+    "lint": "yarn lerna run lint",
+    "precommit": "yarn lerna run test && yarn lint-staged"
   },
   "husky": {
     "hooks": {
@@ -15,6 +16,14 @@
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "yarn lint:file"
+    ],
+    "*.{json,md,scss,yaml,yml}": [
+      "prettier --write"
+    ]
   },
   "config": {
     "commitizen": {
