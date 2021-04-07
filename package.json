@@ -6,7 +6,12 @@
   "author": "Pedro Barco <pedro.barco@tecnico.ulisboa.pt>",
   "license": "MIT",
   "scripts": {
-    "bootstrap": "lerna bootstrap --hoist"
+    "bootstrap": "lerna bootstrap --hoist",
+    "build": "lerna run build",
+    "start": "lerna run start",
+    "dev": "lerna run dev",
+    "test": "lerna run test",
+    "lint": "lerna run lint"
   },
   "devDependencies": {
     "lerna": "^4.0.0"
