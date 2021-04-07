@@ -22,8 +22,6 @@ export const env = {
     logLevel: process.env.LOG_LEVEL || 'info'
   },
   database: {
-    connectionUri: process.env.DATABASE_CONNECTION_URI || '',
-    itemsCollection: process.env.DATABASE_ITEMS_COLLECTION || '',
-    offersCollection: process.env.DATABASE_OFFERS_COLLECTION || ''
+    connectionUri: process.env.DATABASE_CONNECTION_URI || ''
   }
 }
