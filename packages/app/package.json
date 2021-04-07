@@ -1,11 +1,11 @@
 {
-  "name": "api",
+  "name": "app",
   "version": "1.0.0",
   "description": "> TODO: description",
   "author": "Pedro Barco <pedro.barco@tecnico.ulisboa.pt>",
   "homepage": "https://github.com/pedrobarco/medical-crud#readme",
   "license": "MIT",
-  "main": "lib/api.js",
+  "main": "lib/app.js",
   "directories": {
     "lib": "lib"
   },
