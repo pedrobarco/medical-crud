@@ -1,12 +1,3 @@
-import express from 'express'
+import { App } from './app'
 
-const app = express()
-const PORT = 8000
-
-app.get('/', (req, res) => {
-  res.send('Express + Typescript')
-})
-
-app.listen(PORT, () => {
-  console.log(`Server is running at port ${PORT}`)
-})
+export const app = new App().server
