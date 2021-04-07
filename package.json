@@ -1,13 +1,18 @@
 {
   "name": "medical-crud",
   "license": "MIT",
+  "private": true,
   "scripts": {
     "bootstrap": "lerna bootstrap",
+    "start": "lerna run start",
     "build": "lerna run build",
     "test": "lerna run test",
     "lint": "lerna run lint",
-    "clean": "lerna run clean"
+    "clean": "lerna clean"
   },
+  "workspaces": [
+    "packages/*"
+  ],
   "devDependencies": {
     "lerna": "^4.0.0"
   }
