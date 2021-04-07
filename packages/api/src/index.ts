@@ -1,3 +1,5 @@
 import { App } from './app'
 
-export const app = new App().server
+const server = new App()
+
+server.start()

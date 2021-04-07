@@ -105,3 +105,10 @@ dist
 
 # typescript
 dist/
+
+# dotenv
+.env*
+!.env.example
+
+# winston logs
+*.log
