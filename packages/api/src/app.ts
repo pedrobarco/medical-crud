@@ -1,4 +1,6 @@
 import express from 'express'
+import helmet from 'helmet'
+import cors from 'cors'
 import { env } from './lib/env'
 import { logger } from './lib/logger'
 
@@ -12,6 +14,8 @@ export class App {
   }
 
   middlewares () {
+    this.server.use(helmet())
+    this.server.use(cors())
     this.server.use(express.json())
   }
 
