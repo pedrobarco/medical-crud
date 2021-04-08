@@ -4,6 +4,7 @@ import cors from 'cors'
 import { env } from './lib/env'
 import { logger } from './lib/logger'
 import { UsersRouter } from './components/users'
+import { CasesRouter } from './components/cases'
 
 export class App {
   public server;
@@ -22,6 +23,7 @@ export class App {
 
   routes () {
     this.server.use(UsersRouter)
+    this.server.use(CasesRouter)
   }
 
   start () {
