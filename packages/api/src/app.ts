@@ -3,6 +3,7 @@ import helmet from 'helmet'
 import cors from 'cors'
 import { env } from './lib/env'
 import { logger } from './lib/logger'
+import { UsersRouter } from './components/users'
 
 export class App {
   public server;
@@ -20,7 +21,7 @@ export class App {
   }
 
   routes () {
-    // this.server.use(routes)
+    this.server.use(UsersRouter)
   }
 
   start () {
