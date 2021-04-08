@@ -1,4 +1,10 @@
-import { Schema, model } from 'mongoose'
+import { Schema, Document } from 'mongoose'
+import { database } from '../../lib/database'
+
+export interface IUser {
+  email: string;
+  password: string;
+}
 
 const UsersSchema = new Schema({
   email: {
@@ -6,10 +12,7 @@ const UsersSchema = new Schema({
   },
   password: {
     type: String, required: true
-  },
-  salt: {
-    type: String, required: true
   }
 })
 
-export const User = model('User', UsersSchema)
+export const User = database.model<IUser & Document>('User', UsersSchema)

@@ -1,9 +1,11 @@
-import { CreateUserDto } from './users.dto'
-import { User } from './users.model'
+import { User, IUser } from './users.model'
 
 export class UsersDao {
-  static async addUser (user: CreateUserDto) {
-    // generate salt and create user
-    User.create(user)
+  static async addUser (user: IUser) {
+    return User.create(user)
+  }
+
+  static async getUserByEmail (email: string) {
+    return User.findOne({ email })
   }
 }

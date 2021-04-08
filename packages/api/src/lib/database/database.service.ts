@@ -5,3 +5,5 @@ mongoose.connect(env.database.connectionUri, {
   useNewUrlParser: true,
   useUnifiedTopology: true
 })
+
+export { mongoose as database }

@@ -6,3 +6,7 @@ export const UsersRouter = Router()
 UsersRouter
   .route('/users')
   .post(UsersController.createUser)
+
+UsersRouter
+  .route('/login')
+  .post(UsersController.loginUser)
