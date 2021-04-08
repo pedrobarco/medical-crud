@@ -8,5 +8,5 @@ UsersRouter
   .post(UsersController.createUser)
 
 UsersRouter
-  .route('/login')
+  .route('/auth')
   .post(UsersController.loginUser)

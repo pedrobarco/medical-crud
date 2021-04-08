@@ -1,5 +1,4 @@
 import bcrypt from 'bcrypt'
-import jwt from 'jsonwebtoken'
 
 import { UsersDao } from './users.dao'
 import { CreateUserDto } from './users.dto'
