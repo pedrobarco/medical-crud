@@ -22,6 +22,10 @@ export const env = {
     logLevel: process.env.LOG_LEVEL || 'info'
   },
   database: {
-    connectionUri: process.env.DATABASE_CONNECTION_URI || ''
+    connectionUri: process.env.DATABASE_CONNECTION_URI || '',
+    casesCollection: process.env.DATABASE_CASES_COLLECTION || 'cases',
+    labelsCollection: process.env.DATABASE_LABELS_COLLECTION || 'labels',
+    reviewsCollection: process.env.DATABASE_REVIEWS_COLLECTION || 'reviews',
+    usersCollection: process.env.DATABASE_USERS_COLLECTION || 'users'
   }
 }
