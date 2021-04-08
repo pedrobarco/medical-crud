@@ -16,7 +16,7 @@ export class UsersController {
     try {
       const { email, password } = req.body
       const jwt = await UsersService.loginUser({ email, password })
-      return jwt ? res.sendStatus(200).json(jwt) : res.sendStatus(401)
+      jwt ? res.status(200).json(jwt) : res.sendStatus(401)
     } catch (e) {
       res.sendStatus(500)
     }
