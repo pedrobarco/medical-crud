@@ -7,7 +7,7 @@ export class CasesService {
   }
 
   static async updateCase (id: string, dto: UpdateCaseDto) {
-    const c = (await CasesDao.getCaseById(id))?.toJSON()
+    const c = (await CasesDao.getCaseById(id))?.toObject()
     if (c) {
       if (dto.description) {
         c.description = dto.description
