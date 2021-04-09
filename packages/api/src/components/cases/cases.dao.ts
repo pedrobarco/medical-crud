@@ -10,6 +10,10 @@ export class CasesDao {
     return Case.find({})
   }
 
+  static async getAllActiveCases () {
+    return Case.find({ isClosed: false })
+  }
+
   static async updateCase (id: string, dto: UpdateCaseDto) {
     return Case.updateOne({ _id: id }, dto)
   }

@@ -14,9 +14,15 @@ export class CasesController {
     }
   }
 
-  static async getAllCases (_: Request, res: Response) {
+  static async getAllCases (req: Request, res: Response) {
     try {
-      const cases = await CasesService.getAllCases()
+      const { state } = req.query
+      let cases = []
+      if (state && state === 'active') {
+        cases = await CasesService.getAllActiveCases()
+      } else {
+        cases = await CasesService.getAllCases()
+      }
       res.json({ cases })
     } catch (e) {
       logger.error(e.message)
