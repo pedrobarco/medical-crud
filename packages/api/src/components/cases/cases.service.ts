@@ -6,6 +6,10 @@ export class CasesService {
     return CasesDao.addCase(dto)
   }
 
+  static async getAllCases () {
+    return CasesDao.getAllCases()
+  }
+
   static async updateCase (id: string, dto: UpdateCaseDto) {
     const c = (await CasesDao.getCaseById(id))?.toObject()
     if (c) {

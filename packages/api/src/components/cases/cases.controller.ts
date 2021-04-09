@@ -14,6 +14,16 @@ export class CasesController {
     }
   }
 
+  static async getAllCases (req: Request, res: Response) {
+    try {
+      const cases = await CasesService.getAllCases()
+      res.json({ cases })
+    } catch (e) {
+      logger.error(e.message)
+      res.sendStatus(500)
+    }
+  }
+
   static async updateCase (req: Request, res: Response) {
     try {
       const { id } = req.params

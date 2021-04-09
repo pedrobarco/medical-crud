@@ -6,6 +6,10 @@ export class CasesDao {
     return Case.create(c)
   }
 
+  static async getAllCases () {
+    return Case.find({})
+  }
+
   static async updateCase (id: string, dto: UpdateCaseDto) {
     return Case.updateOne({ _id: id }, dto)
   }

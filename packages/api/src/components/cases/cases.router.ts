@@ -5,6 +5,7 @@ export const CasesRouter = Router()
 
 CasesRouter
   .route('/cases')
+  .get(CasesController.getAllCases)
   .post(CasesController.createCase)
 
 CasesRouter

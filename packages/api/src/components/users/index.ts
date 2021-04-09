@@ -1,1 +1,1 @@
-export { UsersRouter } from './users.router'
+export * from './users.router'

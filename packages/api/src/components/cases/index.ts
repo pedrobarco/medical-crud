@@ -1,1 +1,1 @@
-export { CasesRouter } from './cases.router'
+export * from './cases.router'
