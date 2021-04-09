@@ -14,7 +14,7 @@ export class CasesController {
     }
   }
 
-  static async getAllCases (req: Request, res: Response) {
+  static async getAllCases (_: Request, res: Response) {
     try {
       const cases = await CasesService.getAllCases()
       res.json({ cases })

@@ -5,6 +5,7 @@ import { env } from './lib/env'
 import { logger } from './lib/logger'
 import { UsersRouter } from './components/users'
 import { CasesRouter } from './components/cases'
+import { ConditionsRouter } from './components/conditions'
 
 export class App {
   public server;
@@ -24,6 +25,7 @@ export class App {
   routes () {
     this.server.use(UsersRouter)
     this.server.use(CasesRouter)
+    this.server.use(ConditionsRouter)
   }
 
   start () {
