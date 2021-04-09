@@ -6,6 +6,7 @@ import { logger } from './lib/logger'
 import { UsersRouter } from './components/users'
 import { CasesRouter } from './components/cases'
 import { ConditionsRouter } from './components/conditions'
+import { ReviewsRouter } from './components/reviews'
 
 export class App {
   public server;
@@ -26,6 +27,7 @@ export class App {
     this.server.use(UsersRouter)
     this.server.use(CasesRouter)
     this.server.use(ConditionsRouter)
+    this.server.use(ReviewsRouter)
   }
 
   start () {
