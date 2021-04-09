@@ -21,4 +21,8 @@ export class CasesService {
       return CasesDao.updateCase(id, c)
     }
   }
+
+  static async closeCase (id: string) {
+    return this.updateCase(id, { isClosed: true })
+  }
 }
