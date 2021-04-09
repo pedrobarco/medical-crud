@@ -112,3 +112,6 @@ dist/
 
 # winston logs
 *.log
+
+# Mac OS files
+.DS_Store
